@@ -105,7 +105,7 @@ Eva_in_vitro/Fig_9_compare_ours_ransac.py
 If you find this work useful, please consider citing our paper:
 
 ```bibtex
-@article{yang2024boundary,
+@article{p2p,
   author={Yang, Zixin and Heiselman, Jon S. and Han, Cheng and Merrell, Kelly and Simon, Richard and Linte, Cristian A.},
   journal={IEEE Journal of Biomedical and Health Informatics}, 
   title={Resolving the Ambiguity of Complete-to-Partial Point Cloud Registration for Image-Guided Liver Surgery with Patches-to-Partial Matching}, 
