@@ -70,7 +70,7 @@ We provide configuration files, scripts, and pretrained weights to reproduce res
 
 You may refer to the evaluation scripts provided in the `Eva_in_silico` and `Eva_in_vitro` folders:
 
-### In Silico Evaluation
+### *In Silico* Evaluation
 
 ```bash
 # Update the data paths before running
@@ -80,7 +80,7 @@ Eva_in_silico/Fig_6_compare_error_curves.py
 Eva_in_silico/Fig_7_plot_success_rate.py
 ```
 
-### In Vitro Evaluation
+### *In Vitro* Evaluation
 
 ```bash
 # Update the data paths before running
