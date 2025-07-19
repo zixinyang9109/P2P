@@ -38,7 +38,7 @@ P2P_Demo/demo.py
 
 It will generate a visual output similar to:
 
-![plot](./P2P_Demo/P2P_demo.png)
+![plot](./P2P_demo.png)
 
 ### Dependencies
 
