@@ -4,30 +4,11 @@
 
 ## Introduction
 
-This repository is a follow-up to the naive [LiverMatch](https://github.com/zixinyang9109/LiverMatch) framework. We provide *in silico* and *in vitro datasets* to facilitate automatic 3D-3D rigid registration for image-guided liver surgery using learning-based point cloud correspondence methods.
+This repository is a follow-up to the green [LiverMatch](https://github.com/zixinyang9109/LiverMatch) project. We provide *in silico* and *in vitro datasets* to facilitate automatic 3D-3D rigid registration for image-guided liver surgery using learning-based point cloud correspondence methods.
 
 To address the prevalent complete-to-partial ambiguity challenge in this domain, we propose the Patches-to-Partial (P2P) strategy, represented as an easily pluggable module that can be seamlessly integrated into learning-based registration pipelines without modifying their end-to-end structure or introducing additional trainable parameters.
 
 ---
-
-## Datasets
-
-You can download both in silico and in vitro phantom datasets from the following link:
-
-📂 [Google Drive – Datasets](https://drive.google.com/drive/folders/1CpcMFqaiyg3eVnSEItCi1N8hmEeDopkd?usp=sharing)
-
-All data is stored in `.npz` format. To quickly explore the contents, run the visualization script:
-
-```bash
-Eva_in_silico/vis_dataset.py
-```
-
-> ⚠️ This script requires a Python environment with `torch`, `numpy`, `open3D`, and `pyvista`. No specific version constraints apply.
-
-As discussed in the paper, our datasets have limitations—particularly in terms of realistic cropping. We hope this work can inspire the development of more comprehensive datasets in the future.
-
----
-
 ## P2P Demo
 
 To test the P2P module, run the following demo script:
@@ -47,6 +28,24 @@ Ensure your environment includes:
 * `torch`
 * [`pyvista`](https://pyvista.org/)
 * [`pointnet2_ops`](https://github.com/erikwijmans/Pointnet2_PyTorch)
+
+---
+
+## Datasets
+
+You can download both in silico and in vitro phantom datasets from the following link:
+
+📂 [Google Drive – Datasets](https://drive.google.com/drive/folders/1CpcMFqaiyg3eVnSEItCi1N8hmEeDopkd?usp=sharing)
+
+All data is stored in `.npz` format. To quickly explore the contents, run the visualization script:
+
+```bash
+Eva_in_silico/vis_dataset.py
+```
+
+> ⚠️ This script requires a Python environment with `torch`, `numpy`, `open3D`, and `pyvista`. No specific version constraints apply.
+
+As discussed in the paper, our datasets have limitations, particularly in terms of realistic cropping. We hope this work can inspire the development of more comprehensive datasets in the future.
 
 ---
 
@@ -88,17 +87,15 @@ Eva_in_vitro/Table_VII.py
 Eva_in_vitro/Fig_8_compare_K.py
 Eva_in_vitro/Fig_9_compare_ours_ransac.py
 ```
-
 ---
-
 ## Tips & Notes
 
-* **Uniform point density** is critical for sim-to-real generalization.
+* **Uniform point density** is critical for sim-to-real generalization. Thus, the preprocessing is very important.
 * **Higher point cloud density** generally yields better registration accuracy.
 * **RoITr’s sparse superpoints** may degrade accuracy; consider tuning transformer parameters. However, breaking the partial target into many small patches can hinder correspondence due to reduced saliency.
-* For **KPCov**, ensure that multi-level downsampling is enabled; otherwise, it may not extract meaningful features effectively.
+* For **KPCov**, ensure that multi-level downsampling is enabled; otherwise, it may not extract features effectively.
 * In deformation simulations, confining zero-displacement boundary conditions to a small region often introduces a significant **rigid component**. Aligning using volumetric vertices as markers helps reduce this rigid influence.
-* 
+
 ---
 
 ## Citation
@@ -112,7 +109,6 @@ If you find this work useful, please consider citing our paper:
   title={Resolving the Ambiguity of Complete-to-Partial Point Cloud Registration for Image-Guided Liver Surgery with Patches-to-Partial Matching}, 
   year={2025},
   pages={1-14},
-  keywords={Point cloud compression; Liver; Surgery; Laparoscopes; In vitro; Feature extraction; Deformation; Image-guided surgery; Rigid registration},
   doi={10.1109/JBHI.2025.3583875}
 }
 ```
