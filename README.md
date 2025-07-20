@@ -11,13 +11,13 @@ To address the prevalent complete-to-partial ambiguity challenge in this domain,
 ---
 ## P2P Demo
 
-To test the P2P module, run the following demo script:
+To test the P2P module, we offer several samples. Please run the following demo script:
 
 ```bash
 P2P_Demo/demo.py
 ```
 
-It will generate a visual output similar to:
+It will generate a visual output like :
 
 ![plot](./P2P_demo.png)
 
