@@ -11,7 +11,7 @@ To address the prevalent complete-to-partial ambiguity challenge in this domain,
 ---
 ## P2P Demo
 
-To test the P2P module, we offer several samples. Please run the following demo script:
+To test the P2P module, we offer several samples. Please check the demo script:
 
 ```bash
 P2P_Demo/demo.py
@@ -51,7 +51,7 @@ As discussed in the paper, our datasets have limitations, particularly in terms 
 
 ## Baselines
 
-We provide configuration files, scripts, and pretrained weights to reproduce results from several baselines:
+If you want to check details about how to get results from baselines and integrate the P2P into Lepard and LiverMatch, you can download our [configuration files, scripts, and pretrained weights](https://drive.google.com/file/d/1L0mWJevuJVbdiOjW7o0wLeAFCpCmug8o/view?usp=sharing) of the following baselines:
 
 * [Go-ICP](https://github.com/aalavandhaann/go-icp_cython)
 * [RoITr](https://github.com/haoyu94/RoITr)
@@ -59,9 +59,9 @@ We provide configuration files, scripts, and pretrained weights to reproduce res
 * [LiverMatch](https://github.com/zixinyang9109/LiverMatch)
 * [Lepard](https://github.com/rabbityl/lepard)
 
-> ✅ You can use the Conda environment from [Lepard](https://github.com/rabbityl/lepard) to run all learning-based baselines.
+> You can use the Conda environment from [Lepard](https://github.com/rabbityl/lepard) to run all learning-based baselines.
 
-> ⚠️ Full instructions and scripts for baseline reproduction will be added soon.
+> Hope it may be useful in your projects.
 
 ---
 
