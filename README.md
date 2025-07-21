@@ -23,11 +23,6 @@ To test the P2P module, we offer several samples. Please check the demo script:
 ```bash
 P2P_Demo/demo.py
 ```
-
-It will generate a visual output like :
-
-![plot](./P2P_demo.png)
-
 ### Dependencies
 
 Ensure your environment includes:
@@ -35,6 +30,12 @@ Ensure your environment includes:
 * `torch`
 * [`pyvista`](https://pyvista.org/)
 * [`pointnet2_ops`](https://github.com/erikwijmans/Pointnet2_PyTorch)
+  
+It will generate a visual output like :
+
+![plot](./P2P_demo.png)
+
+
 
 ---
 
