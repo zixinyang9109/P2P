@@ -6,7 +6,14 @@
 
 This repository is a follow-up to the green [LiverMatch](https://github.com/zixinyang9109/LiverMatch) project. We provide *in silico* and *in vitro datasets* to facilitate automatic 3D-3D rigid registration for image-guided liver surgery using learning-based point cloud correspondence methods.
 
-To address the prevalent complete-to-partial ambiguity challenge in this domain, we propose the Patches-to-Partial (P2P) strategy, represented as an easily pluggable module that can be seamlessly integrated into learning-based registration pipelines without modifying their end-to-end structure or introducing additional trainable parameters.
+To address the prevalent complete-to-partial ambiguity challenge in the scenario of liver surgery, we propose the Patches-to-Partial (P2P) strategy, which represents an easily pluggable module that can be seamlessly integrated into learning-based registration pipelines without modifying their end-to-end structure or introducing additional trainable parameters.
+
+## Theoretical Foundation
+
+The theoretical foundation of our approach is two-fold. First, in comparison to the complete $\mathbf{S}$, a subset $\mathbf{S}_k$ that closely resembles the shape of $\mathbf{T}$ is likely to contain distinctive local structures, thereby reducing matching ambiguity. Second, the resulting set of transformations, $\mathcal{T} = {(R_1, t_1), (R_2, t_2), ..., (R_k, t_k)}$, introduces multiple hypotheses, increasing the likelihood of identifying the optimal transformation.
+
+The first argument is based on the premise that the ambiguity in complete-to-partial matching is minimized in the limit of the source point cloud approaching the same extent and scale as the target point cloud. If the appropriate patch is selected, the registration problem effectively simplifies to a complete-to-complete scenario. The second argument then follows naturally: as the number of patches increases and selection is appropriately guided, the probability of identifying the correct transformation correspondingly improves.
+
 
 ---
 ## P2P Demo
