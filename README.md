@@ -68,7 +68,7 @@ If you want to check details about how to get results from baselines and integra
 
 > You can use the Conda environment from [Lepard](https://github.com/rabbityl/lepard) to run all learning-based baselines. Download the baselines and put our files in the corresponding locations.
 
-> Hope it may be useful in your projects.
+> The scripts need some further cleanup, but hope they could be helpful.
 
 ---
 
@@ -109,7 +109,7 @@ Eva_in_vitro/Fig_9_compare_ours_ransac.py
 
 ## Citation
 
-If you get new knowledges from this work, please consider citing our paper :blush::
+If you get new knowledge from this work, please consider citing our paper :blush::
 
 ```bibtex
 @article{p2p,
