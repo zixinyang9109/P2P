@@ -59,7 +59,7 @@ If you want to check details about how to get results from baselines and integra
 * [LiverMatch](https://github.com/zixinyang9109/LiverMatch)
 * [Lepard](https://github.com/rabbityl/lepard)
 
-> You can use the Conda environment from [Lepard](https://github.com/rabbityl/lepard) to run all learning-based baselines.
+> You can use the Conda environment from [Lepard](https://github.com/rabbityl/lepard) to run all learning-based baselines. Download the baselines and put our files in the corresponding locations.
 
 > Hope it may be useful in your projects.
 
@@ -91,16 +91,18 @@ Eva_in_vitro/Fig_9_compare_ours_ransac.py
 ## Tips & Notes
 
 * **Uniform point density** is critical for sim-to-real generalization. Thus, the preprocessing is very important.
-* **Higher point cloud density** generally yields better registration accuracy.
-* **RoITr’s sparse superpoints** may degrade accuracy; consider tuning transformer parameters. However, breaking the partial target into many small patches can hinder correspondence due to reduced saliency.
-* For **KPCov**, ensure that multi-level downsampling is enabled; otherwise, it may not extract features effectively.
+* For **KPCov**, ensure the subsampling ratio enables multi-level downsampling. If it does not downsample the point cloud at each level, it may not extract features effectively.
+* **Higher point cloud density** generally yields better registration accuracy. Here, we chose to normalize and voxelize (vox_size=0.04) the inputs. If you decrease the vox_size and the subsampling ratio of **KPCov**, you will get better results.
+* **RoITr’s sparse superpoints** may degrade accuracy; consider tuning transformer parameters, which is not trivial.
+* In the node-to-group approach used in **RoITr** and its variants, breaking the partial target into many small patches can hinder correspondence due to reduced saliency, as we already have a partial target point cloud.
 * In deformation simulations, confining zero-displacement boundary conditions to a small region often introduces a significant **rigid component**. Aligning using volumetric vertices as markers helps reduce this rigid influence.
+* If you do not remove the one-to-one correspondence in the simulations, you will get super good results for the simulation testing data, but unstable results in real data.
 
 ---
 
 ## Citation
 
-If you find this work useful, please consider citing our paper:
+If you get new knowledges from this work, please consider citing our paper :blush::
 
 ```bibtex
 @article{p2p,
