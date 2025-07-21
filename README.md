@@ -25,7 +25,7 @@ P2P_Demo/demo.py
 ```
 ### Dependencies
 
-Ensure your environment includes:
+*Dependencies*: ensure your environment includes:
 
 * `torch`
 * [`pyvista`](https://pyvista.org/)
