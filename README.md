@@ -23,7 +23,6 @@ To test the P2P module, we offer several samples. Please check the demo script:
 ```bash
 P2P_Demo/demo.py
 ```
-### Dependencies
 
 *Dependencies*: ensure your environment includes:
 
