@@ -40,7 +40,7 @@ It will generate a visual output like :
 
 ## Datasets
 
-You can download both in silico and in vitro phantom datasets from the following link:
+You can download both *in silico* and *in vitro* phantom datasets from the following link:
 
 📂 [Google Drive – Datasets](https://drive.google.com/drive/folders/1CpcMFqaiyg3eVnSEItCi1N8hmEeDopkd?usp=sharing)
 
@@ -99,7 +99,7 @@ Eva_in_vitro/Fig_9_compare_ours_ransac.py
 
 * **Uniform point density** is critical for sim-to-real generalization. Thus, the preprocessing is very important.
 * For **KPCov**, ensure the subsampling ratio enables multi-level downsampling. If it does not downsample the point cloud at each level, it may not extract features effectively.
-* **Higher point cloud density** generally yields better registration accuracy. Here, we chose to normalize and voxelize (vox_size=0.04) the inputs. If you decrease the vox_size and the subsampling ratio of **KPCov**, you will get better results.
+* **Higher point cloud density** generally yields better registration accuracy. Here, we chose to normalize and voxelize (vox_size=0.04) the inputs. If you decrease the vox size and the subsampling ratio of **KPCov**, you will get better results.
 * **RoITr’s sparse superpoints** may degrade accuracy; consider tuning transformer parameters, which is not trivial.
 * In the node-to-group approach used in **RoITr** and its variants, breaking the partial target into many small patches can hinder correspondence due to reduced saliency, as we already have a partial target point cloud.
 * In deformation simulations, confining zero-displacement boundary conditions to a small region often introduces a significant **rigid component**. Aligning using volumetric vertices as markers helps reduce this rigid influence.
