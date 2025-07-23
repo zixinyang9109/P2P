@@ -109,7 +109,7 @@ Eva_in_vitro/Fig_9_compare_ours_ransac.py
 
 ## Citation
 
-If you get new knowledge from this work, please consider citing our paper :blush::
+Please consider citing our paper :blush::
 
 ```bibtex
 @article{p2p,
