@@ -58,7 +58,7 @@ As discussed in the paper, our datasets have limitations, particularly in terms 
 
 ## Baselines
 
-If you want to check details about how to get results from baselines and integrate the P2P into Lepard and LiverMatch, you can download our [configuration files, scripts, and pretrained weights](https://drive.google.com/file/d/1L0mWJevuJVbdiOjW7o0wLeAFCpCmug8o/view?usp=sharing) of the following baselines:
+If you want to check details about how to get results from baselines and integrate the P2P into Lepard and LiverMatch, you can download our [configuration files, scripts, and pretrained weights](https://drive.google.com/file/d/11gGAz-7gM-41nCwhu8mebgR9Qm9IygU0/view?usp=sharing) of the following baselines:
 
 * [Go-ICP](https://github.com/aalavandhaann/go-icp_cython)
 * [RoITr](https://github.com/haoyu94/RoITr)
